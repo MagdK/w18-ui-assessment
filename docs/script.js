@@ -32,8 +32,8 @@ const beerCard = (beers) => {
                             <h4 class="text">${text}<h4>
                         </div>
                     </div>
-                    <button class="button-details">details 
-                    <span class="material-icons button-arrow">arrow_forward</span> </button>
+                    <button class="button-details"><span class="button-copy">details</span> 
+                    <span class="material-icons button-icon">arrow_forward</span> </button>
                 </div>
             </article>
             `
