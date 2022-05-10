@@ -180,13 +180,14 @@ p {
 	}
 
 	.beer-card:nth-child(odd) {
-		justify-content: end;
-		background-color: blue;
+		justify-items: end;
+		align-items: end;
+	
+		background-color: rgb(48, 65, 62);
 	}
 
 	.beer-card:nth-child(even) {
-		justify-content: start;
-		background-color: brown;
+		background-color: rgb(33, 63, 49);
 	}
 }
 
