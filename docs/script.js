@@ -10,7 +10,7 @@ const pageHeader = () => {
 function mainContentWrapper(content) {
     return `
         <main>
-            <section class="content-wrapper">
+            <section class="section-beers">
                 ${content}
             </section>
         </main>
@@ -19,76 +19,28 @@ function mainContentWrapper(content) {
 
 const beerCard = (beers) => {
     return beers.cards.map(beer => {
-        const { title, sub, text} = beer
+        const { title, sub, text, id } = beer
         return (
             `
-            <div class="card">
-                <div>1</div>
-                <h3>${title}</h3>
-                <p>${sub}</p>
-                <p>${text}</p>
-                <button>details</button>
-            </div>
+            <article class="beer-card">
+                <div class="beer-number">${id}</div>
+                <div class="beer-card-inner">
+                        <h3 class="title">${title}</h3>
+                        <div class="beer-info">
+                            <hr class="divider">
+                            <p class="sub">${sub}</p>
+                            <h4 class="text">${text}<h4>
+                        </div>
+                    </div>
+                    <button class="button-details">details 
+                    <span class="material-icons button-arrow">arrow_forward</span> </button>
+                </div>
+            </article>
             `
         )
     }).join("")
 };
 
-const mockBeers = () => {
-    return `
-        <main>
-            <section class="section-beers">
-                <article class="beer-card">
-                    <div class="beer-number">1</div>
-                    <div class="beer-card-inner">
-                        <h3 class="title">Mango Bay</h3>
-                        <hr class="divider">
-                        <p class="sub">Mad Scientist Beer</p>
-                        <h4 class="text">Pale Ale - American<h4>
-                    </div>
-                    <button>details 
-                    <span class="material-icons button-arrow">arrow_forward</span> </button>
-                </article>
-                <article class="beer-card">
-                    <div class="beer-number">2</div>
-                    <div class="beer-card-inner">
-                        <h3>Mango Bay</h3>
-                        <p>Mad Scientist Beer</p>
-                        <h4>Pale Ale - American<h4>
-                    </div>
-                    <button>details</button>
-                </article>
-                <article class="beer-card">
-                    <div class="beer-number">3</div>
-                    <div class="beer-card-inner">
-                        <h3>Mango Bay</h3>
-                        <p>Mad Scientist Beer</p>
-                        <h4>Pale Ale - American<h4>
-                    </div>
-                    <button>details</button>
-                </article>
-                <article class="beer-card">
-                    <div class="beer-number">4</div>
-                    <div class="beer-card-inner">
-                        <h3>Mango Bay</h3>
-                        <p>Mad Scientist Beer</p>
-                        <h4>Pale Ale - American<h4>
-                    </div>
-                    <button>details</button>
-                </article>
-                <article class="beer-card">
-                    <div class="beer-number">5</div>
-                    <div class="beer-card-inner">
-                        <h3>Mango Bay</h3>
-                        <p>Mad Scientist Beer</p>
-                        <h4>Pale Ale - American<h4>
-                    </div>
-                    <button>details</button>
-                </article>
-            </section>
-        </main>
-    `
-}
 
 
 fetchBeers = async () => {
