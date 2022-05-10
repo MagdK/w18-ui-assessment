@@ -97,9 +97,13 @@ p {
 	border-bottom: 1px solid var(--secondary-color);
 }
 
+.main {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
 .beer-card {
 	position: relative;
-	width: 400px;
 	height: 250px;
 	background-color: var(--secondary-color);
 	color: var(--primary-color);
@@ -175,19 +179,8 @@ p {
 		grid-template-columns: repeat(2, 1fr);
 		row-gap: 60px;
 		column-gap: 60px;
-		max-width: 1200px;
+		width: 860px;
 		margin: 60px auto;
-	}
-
-	.beer-card:nth-child(odd) {
-		justify-items: end;
-		align-items: end;
-	
-		background-color: rgb(48, 65, 62);
-	}
-
-	.beer-card:nth-child(even) {
-		background-color: rgb(33, 63, 49);
 	}
 }
 
@@ -196,11 +189,26 @@ p {
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 60px;
-		max-width: 1200px;
 		margin: 60px auto;
 	}
 
 	.beer-card {
 		margin: 0 auto;
+		width: 400px;
+	}
+}
+
+@media only screen and (max-width: 440px) {
+	.section-beers {
+		display: flex;
+		flex-direction: column;
+		/* grid-template-columns: 1fr; */
+		gap: 60px;
+		margin: 60px auto;
+	}
+
+	.beer-card {
+		margin: 0 auto;
+		max-width: 400px;
 	}
 }

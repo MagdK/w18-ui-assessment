@@ -9,7 +9,7 @@ const pageHeader = () => {
 
 function mainContentWrapper(content) {
     return `
-        <main>
+        <main class="main">
             <section class="section-beers">
                 ${content}
             </section>
@@ -44,7 +44,7 @@ const beerCard = (beers) => {
 
 
 fetchBeers = async () => {
-    const beerData = await fetch(`http://127.0.0.1:9000/data`);
+    const beerData = await fetch(`/data.json`);
     return beerData.json();
 };
 
