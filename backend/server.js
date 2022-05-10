@@ -6,8 +6,7 @@ const app = express();
 app.use(express.json());
 
 const pathToDocs = path.join(__dirname, '../docs');
-const pathToPublic = path.join(pathToDocs, 'pub');
-const pathToBeers = path.join(pathToPublic, 'data.json');
+const pathToBeers = path.join(pathToDocs, 'data.json');
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(pathToDocs, 'index.html'));
@@ -18,7 +17,7 @@ app.get('/data', (req, res) => {
     res.sendFile(pathToBeers);
 });
 
-app.use('/pub', express.static(pathToPublic));
+app.use('/pub', express.static(pathToDocs));
 
 
 
