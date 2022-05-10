@@ -44,7 +44,7 @@ const beerCard = (beers) => {
 
 
 fetchBeers = async () => {
-    const beerData = await fetch(`/data.json`);
+    const beerData = await fetch(`data.json`);
     return beerData.json();
 };
 
