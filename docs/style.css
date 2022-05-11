@@ -199,6 +199,10 @@ p {
 }
 
 @media only screen and (max-width: 440px) {
+	.main {
+		margin: 0 40px;
+	}
+	
 	.section-beers {
 		display: flex;
 		flex-direction: column;
@@ -209,6 +213,6 @@ p {
 
 	.beer-card {
 		margin: 0 auto;
-		max-width: 400px;
+		width: 100%;
 	}
 }
