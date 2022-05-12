@@ -175,19 +175,23 @@ p {
 
 @media only screen and (min-width: 940px) {
     .section-beers {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		row-gap: 60px;
-		column-gap: 60px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 60px;
 		width: 860px;
 		margin: 60px auto;
+	}
+
+	.beer-card {
+		margin: 0 auto;
+		width: 400px;
 	}
 }
 
 @media only screen and (max-width: 939px) {
 	.section-beers {
-		display: grid;
-		grid-template-columns: 1fr;
+		display: flex;
+		flex-direction: column;
 		gap: 60px;
 		margin: 60px auto;
 	}
@@ -202,11 +206,10 @@ p {
 	.main {
 		margin: 0 40px;
 	}
-	
+
 	.section-beers {
 		display: flex;
 		flex-direction: column;
-		/* grid-template-columns: 1fr; */
 		gap: 60px;
 		margin: 60px auto;
 	}
