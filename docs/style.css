@@ -78,6 +78,7 @@ p {
 
 /* TEXT OVER */
 
+
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
@@ -164,7 +165,7 @@ p {
 	border: 2px solid var(--primary-color);
 }
 
-.button-copy {
+.button-text {
 	position: relative;
 	font-size: 14px;
 	line-height: 50px;
