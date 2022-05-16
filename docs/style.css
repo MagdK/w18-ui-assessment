@@ -88,6 +88,8 @@ p {
 }
 
 .header {
+	position: fixed;
+	top: 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -95,17 +97,18 @@ p {
 	height: 60px;
 	padding: 0 15px 0 10px;
 	border-bottom: 1px solid var(--secondary-color);
-	position: sticky;
+	z-index: 99;
+	background-color: var(--primary-color);
 }
 
 .main {
 	max-width: 1200px;
 	margin: 0 auto;
+	padding-top: 60px;
 }
 
 .beer-card {
 	position: relative;
-	height: 250px;
 	background-color: var(--secondary-color);
 	color: var(--primary-color);
 	padding: 40px;
@@ -186,6 +189,7 @@ p {
 	.beer-card {
 		margin: 0 auto;
 		width: 400px;
+		min-height: 250px;
 	}
 }
 
@@ -200,6 +204,7 @@ p {
 	.beer-card {
 		margin: 0 auto;
 		width: 400px;
+		min-height: 250px;
 	}
 }
 
@@ -218,5 +223,6 @@ p {
 	.beer-card {
 		margin: 0 auto;
 		width: 100%;
+		min-height: 250px;
 	}
 }
