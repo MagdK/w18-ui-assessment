@@ -95,6 +95,7 @@ p {
 	height: 60px;
 	padding: 0 15px 0 10px;
 	border-bottom: 1px solid var(--secondary-color);
+	position: sticky;
 }
 
 .main {
