@@ -182,13 +182,12 @@ p {
     .section-beers {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
 		gap: 60px;
-		width: 860px;
 		margin: 60px auto;
 	}
 
 	.beer-card {
-		margin: 0 auto;
 		width: 400px;
 		min-height: 250px;
 	}
