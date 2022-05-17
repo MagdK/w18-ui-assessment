@@ -6,62 +6,52 @@ const beers = {
 		{
 			title: "Mango Bay",
 			sub: "Mad Scientist Beer",
-			text: "Pale Ale - American",
-            id: 1
+			text: "Pale Ale - American"
 		},
 		{
 			title: "Távoli Galaxis",
 			sub: "Rothbeer Brewery",
-			text: "IPA - American",
-            id: 2
+			text: "IPA - American"
 		},
 		{
 			title: "Flying Rabbit AIPA",
 			sub: "MONYO Brewing Co.",
-			text: "IPA - American",
-            id: 3
+			text: "IPA - American"
 		},
 		{
 			title: "Liquid Cocaine",
 			sub: "Mad Scientist Beer",
-			text: "IPA - Imperial",
-            id: 4
+			text: "IPA - Imperial"
 		},
 		{
 			title: "Organic Chocolate Stout",
 			sub: "Samuel Smith Old Brewery",
-			text: "Stout - English",
-            id: 5
+			text: "Stout - English"
 		},
 		{
 			title: "Bracia",
 			sub: "Thornbridge Brewery",
-			text: "Strong Ale - English",
-            id: 6
+			text: "Strong Ale - English"
 		},
 		{
 			title: "Oatmeal Stout",
 			sub: "Samuel Smith Old Brewery",
-			text: "Stout - Oatmeal",
-            id: 7
+			text: "Stout - Oatmeal"
 		},
 		{
 			title: "Black Tokyo Horizon",
 			sub: "BrewDog",
-			text: "Stout - American Imperial",
-            id: 8
+			text: "Stout - American Imperial"
 		},
 		{
 			title: "Vintage Ale",
 			sub: "Fuller's",
-			text: "Old Ale",
-            id: 9
+			text: "Old Ale"
 		},
 		{
 			title: "All the Leaves are Brown",
 			sub: "Tempest Brewing Company",
-			text: "Brown Ale - American",
-            id: 10
+			text: "Brown Ale - American"
 		},
 	]
 }
@@ -87,12 +77,12 @@ function mainContentWrapper(content) {
 
 
 const beerCard = (beers) => {
-    return beers.cards.map(beer => {
-        const { title, sub, text, id } = beer
+    return beers.cards.map((beer, index) => {
+        const { title, sub, text } = beer
         return (
             `
             <article class="beer-card">
-                <div class="beer-number">${id}</div>
+                <div class="beer-number">${index + 1}</div>
                 <div class="beer-card-inner">
                         <h3 class="title">${title}</h3>
                         <div class="beer-info">
