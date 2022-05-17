@@ -1,3 +1,71 @@
+const beers = {
+	id: "beers",
+	logo: "Best Beers",
+	button: "details",
+	cards: [
+		{
+			title: "Mango Bay",
+			sub: "Mad Scientist Beer",
+			text: "Pale Ale - American",
+            id: 1
+		},
+		{
+			title: "Távoli Galaxis",
+			sub: "Rothbeer Brewery",
+			text: "IPA - American",
+            id: 2
+		},
+		{
+			title: "Flying Rabbit AIPA",
+			sub: "MONYO Brewing Co.",
+			text: "IPA - American",
+            id: 3
+		},
+		{
+			title: "Liquid Cocaine",
+			sub: "Mad Scientist Beer",
+			text: "IPA - Imperial",
+            id: 4
+		},
+		{
+			title: "Organic Chocolate Stout",
+			sub: "Samuel Smith Old Brewery",
+			text: "Stout - English",
+            id: 5
+		},
+		{
+			title: "Bracia",
+			sub: "Thornbridge Brewery",
+			text: "Strong Ale - English",
+            id: 6
+		},
+		{
+			title: "Oatmeal Stout",
+			sub: "Samuel Smith Old Brewery",
+			text: "Stout - Oatmeal",
+            id: 7
+		},
+		{
+			title: "Black Tokyo Horizon",
+			sub: "BrewDog",
+			text: "Stout - American Imperial",
+            id: 8
+		},
+		{
+			title: "Vintage Ale",
+			sub: "Fuller's",
+			text: "Old Ale",
+            id: 9
+		},
+		{
+			title: "All the Leaves are Brown",
+			sub: "Tempest Brewing Company",
+			text: "Brown Ale - American",
+            id: 10
+		},
+	]
+}
+
 const pageHeader = () => {
     return `
         <header class="header">
@@ -11,11 +79,12 @@ function mainContentWrapper(content) {
     return `
         <main class="main">
             <section class="section-beers">
-                ${content}
+             ${content}
             </section>
         </main>
     `
 };
+
 
 const beerCard = (beers) => {
     return beers.cards.map(beer => {
@@ -38,30 +107,20 @@ const beerCard = (beers) => {
                 </div>
             </article>
             `
-        )
-    }).join("")
+            )
+        }).join("")
 };
 
 
 
-fetchBeers = async () => {
-    const beerData = await fetch(`data.json`);
-    return beerData.json();
-};
 
-
-
-const loadEvent = async () => {
-    const beers = await fetchBeers();
+const loadEvent = () => {
     const rootElement = document.getElementById("root");
-    // const contentWrapper = document.querySelector(".content-wrapper");
     
     rootElement.insertAdjacentHTML("beforeend", pageHeader());
     rootElement.insertAdjacentHTML("beforeend", mainContentWrapper(
         beerCard(beers)
     ));
-    // rootElement.insertAdjacentHTML("beforeend", mainContentWrapper());
-    // rootElement.innerHTML = beerCard(beers);
 };
 
 window.addEventListener("load", loadEvent);
